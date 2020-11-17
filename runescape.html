@@ -1,0 +1,80 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <title>Old school Runescape</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <script src="modernizr.custom.05819.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="runescape.html">Runescape</a></li>
+                <li><a href="borderlands3.html">Borderland 3</a></li>
+                <li><a href="skyrim.html">Skyrim</a></li>
+                <li><a href="uno.html">Uno</a></li>
+            </ul>
+        </nav>
+
+        <br>
+        <img src="images/osrslogo.jfif" alt="Oldschool Runescape logo" title="Oldschool Runescape logo" class="responsive">
+        <p>The classic Oldschool Runescape logo.  <a href="https://www.google.com/search?q=osrs&tbm=isch&ved=2ahUKEwjag6yF9_bsAhVvAN8KHSckBYYQ2-cCegQIABAA&oq=osrs&gs_lcp=CgNpbWcQAzIECAAQQzIECAAQQzIFCAAQsQMyBQgAELEDMgUIABCxAzICCAAyBQgAELEDMgIIADIFCAAQsQMyBQgAELEDUIQXWJsbYMIcaABwAHgAgAGBBYgBgQWSAQM1LTGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=5vqpX9r4C--A_AanyJSwCA&bih=880&biw=1920&rlz=1C1CHBF_enUS923US923">Source</a> </p>
+
+        <main>
+            <h1>Oldschool Runescape</h1>
+            <p>
+                This classic game is one I have only recently gotten into. Mostly because it is mainly a computer game. They have made a mobile version but I believe<br>
+                to truly experience the game to the fullest you should play on PC. There is a lot of stuff to do here all of it with the goal to make your account better.<br>
+                The main way i have been going about it is to unlock a variety of different teleports because the map is quite large. You actually can't run across the <br>
+                entire thing, you have to take a boat or two. Run energy is not unlimited either. Which leads me to the skills.
+            </p>
+        </main>
+
+        <a href="https://oldschool.runescape.com/" target="OfficialOSRS">Official OSRS site</a>
+
+        <h3>Skilling</h3>
+            <p>
+                The main portion of the game is the different skills that you can train. They are quite the time sink even when getting the max exp possible. Your time<br>
+                put into these skills will not go unrewarded however. On your way to any 99, you unlock new items, better skilling methods, new areas, and the most prestigious<br>
+                is the cape you are able to get once you reach 99. It's really the ultimate flex, these capes give you special perks as well as an exclusive emote for ultimate<br>
+                show-boating.
+            </p>
+        
+        <h3>How much exp do you need</h3>
+        <p>Here you can calulate how much more exp you'll need in order to reach level 99 in a certain skill.</p>
+
+        <form>
+            <fieldset>
+                <label for="currentEXP">
+                    Enter your current EXP
+                </label>
+                <input type="number" id="currentEXP">
+            </fieldset>
+            <fieldset>
+                <button type="button" id="button">Calculate EXP</button>
+            </fieldset>
+            <fieldset>
+                <p>Remaining EXP</p>
+               <p id="remainingEXP"></p>
+             </fieldset>
+        </form>
+
+        <script>
+            function expCalculater() {
+                var currentEXP = document.getElementById("currentEXP").value;
+                var remainingEXP = 13034431 - currentEXP;
+                document.getElementById("remainingEXP").innerHTML = remainingEXP;
+            }
+            document.getElementById("button").addEventListener("click", expCalculater, false);
+        </script>
+
+    </body>
+
+    <footer>
+        Copyright &#169; 2021-2099 (Disclaimer: This copyright claim holds no real meaning. Thank you.)
+    </footer>
+
+</html>

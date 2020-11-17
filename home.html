@@ -1,0 +1,73 @@
+<!doctype HTML>
+<html lang="en">
+
+    <head>
+        <title>Logan's Guide To Games</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <script src="modernizr.custom.05819.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="runescape.html">Runescape</a></li>
+                <li><a href="borderlands3.html">Borderland 3</a></li>
+                <li><a href="skyrim.html">Skyrim</a></li>
+                <li><a href="uno.html">Uno</a></li>
+            </ul>
+        </nav>
+
+        <br>
+        <img src="images/download.jfif" alt="Sick gaming setup" title="Sick gaming setup" class="responsive">
+        <p>An incredible looking PC setup.  <a href="https://www.google.com/search?q=pic+of+gaming+setup&rlz=1C1CHBF_enUS923US923&source=lnms&tbm=isch&sa=X&ved=2ahUKEwji1PvJ-vbsAhWIiOAKHTk4CdEQ_AUoAXoECAYQAw&biw=1920&bih=937">Source</a> </p>
+
+        <main>
+            <h2>The Gist</h2>
+            <p>This website was made with the intent to inform people about certain games, give my professional opinion, as well as a guide for a variety of different games.</p>
+            <p>There may also be updates on my progression through which ever game I am playing at some period of time.</p>
+        </main>
+
+        <h3>About Me</h3>
+        <p>This is a short description about myself and my credentials.</p>
+        <p>I am an 18 year old college student who has been palying games for as long as I can remember. My first taste of gaming was with the origanl Nintendo Ds.<br>
+            Playing a few games such as nintendogs and Bookworm. Eventually I finally was able to play some games on the xbox 360, mostly a bunch of singleplayer games<br>
+            that I can't really remember. Since the end of middle school though I have been playing mobile games like Clash of Clans and Brawl Stars. Slowly, through freinds,<br>
+            I was introduced to games like Battlefield and Call of Duty. This sparked my competitive drive. Now i am always trying to get better at any sort of competitive game<br>
+            I can get my hands on. Always striving to get every achievement available as well as any collectibles there may be.
+        </p>
+
+        <fieldset>
+            <p>Whats 9+10?</p>
+            <input type="number" id="number">
+            <button id="confirm">Is this your final answer?</button>
+        </fieldset>
+
+        <script>
+            function congrats() {
+                var personNumber = document.getElementById("number").value
+                if (personNumber <= 18) {
+                    alert("You are not very intellegent");
+                } else if (personNumber == 19) {
+                    alert("Wow! Youre really smart!");
+                } else if (personNumber == 20){
+                    alert("So closeeee");
+                } else if (personNumber == 21) {
+                    alert("You stupid!");
+                } else if (personNumber >= 22) {
+                    alert("Maybe you should take a math class");
+                }
+            }
+            document.getElementById("confirm").addEventListener("click", congrats, false);
+            document.getElementById("confirm").attachEvent("onclick", congrats);
+        </script>
+
+    </body>
+
+    <footer>
+        Copyright &#169; 2021-2099 (Disclaimer: This copyright claim holds no real meaning. Thank you.)
+    </footer>
+
+</html>

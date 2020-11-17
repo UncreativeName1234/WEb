@@ -1,0 +1,51 @@
+head, title, body, nav, main, h2, h3, p, footer, fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+head, title, body, nav, main, h2, h3, p, footer, fieldset {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 2em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+nav li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+nav li a:hover {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+head, title, body, main, h2, h3, p, footer, fieldset {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.15em;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+}
