@@ -1,5 +1,6 @@
 <!doctype HTML>
 <html lang="en">
+
     <head>
         <title>Old school Runescape</title>
         <link rel="stylesheet" href="css/style.css">
@@ -7,8 +8,7 @@
         <script src="modernizr.custom.05819.js"></script>
     </head>
 
-    <body>
-
+    <header>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -18,24 +18,31 @@
                 <li><a href="uno.html">Uno</a></li>
             </ul>
         </nav>
+    </header>
+
+    <body>
 
         <br>
-        <img src="images/osrslogo.jfif" alt="Oldschool Runescape logo" title="Oldschool Runescape logo" class="responsive">
-        <p>The classic Oldschool Runescape logo.  <a href="https://www.google.com/search?q=osrs&tbm=isch&ved=2ahUKEwjag6yF9_bsAhVvAN8KHSckBYYQ2-cCegQIABAA&oq=osrs&gs_lcp=CgNpbWcQAzIECAAQQzIECAAQQzIFCAAQsQMyBQgAELEDMgUIABCxAzICCAAyBQgAELEDMgIIADIFCAAQsQMyBQgAELEDUIQXWJsbYMIcaABwAHgAgAGBBYgBgQWSAQM1LTGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=5vqpX9r4C--A_AanyJSwCA&bih=880&biw=1920&rlz=1C1CHBF_enUS923US923">Source</a> </p>
+        <img src="images/osrshighres.jpg" alt="Oldschool Runescape logo" title="Oldschool Runescape logo" class="responsive">
+        <p>The classic Oldschool Runescape logo.  <a href="https://www.google.com/search?q=high+res+osrs+logo&tbm=isch&ved=2ahUKEwiSotP8h5ztAhVMO98KHQgvANUQ2-cCegQIABAA&oq=high+res+osrs+logo&gs_lcp=CgNpbWcQAzoICAAQsQMQgwE6AggAOgUIABCxAzoECAAQQzoHCAAQsQMQQzoECAAQGFCOnQ5Yps0OYIrPDmgAcAB4AIAB8wGIAfcSkgEGMC4xNi4ymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=tXK9X9LzKcz2_AaI3oCoDQ&bih=937&biw=1920&rlz=1C1CHBF_enUS923US923#imgrc=B3xJdFk-dxFhJM">Source</a> </p>
 
         <main>
+
             <h1>Oldschool Runescape</h1>
+
             <p>
                 This classic game is one I have only recently gotten into. Mostly because it is mainly a computer game. They have made a mobile version but I believe<br>
                 to truly experience the game to the fullest you should play on PC. There is a lot of stuff to do here all of it with the goal to make your account better.<br>
                 The main way i have been going about it is to unlock a variety of different teleports because the map is quite large. You actually can't run across the <br>
                 entire thing, you have to take a boat or two. Run energy is not unlimited either. Which leads me to the skills.
             </p>
+
         </main>
 
         <a href="https://oldschool.runescape.com/" target="OfficialOSRS">Official OSRS site</a>
 
         <h3>Skilling</h3>
+
             <p>
                 The main portion of the game is the different skills that you can train. They are quite the time sink even when getting the max exp possible. Your time<br>
                 put into these skills will not go unrewarded however. On your way to any 99, you unlock new items, better skilling methods, new areas, and the most prestigious<br>
@@ -44,6 +51,7 @@
             </p>
         
         <h3>How much exp do you need</h3>
+
         <p>Here you can calulate how much more exp you'll need in order to reach level 99 in a certain skill.</p>
 
         <form>
@@ -64,9 +72,13 @@
 
         <script>
             function expCalculater() {
+                if (document.getElementById("currentEXP").value <= 0) {
+                    alert("Please enter a number");
+                } else {
                 var currentEXP = document.getElementById("currentEXP").value;
                 var remainingEXP = 13034431 - currentEXP;
                 document.getElementById("remainingEXP").innerHTML = remainingEXP;
+                }
             }
             document.getElementById("button").addEventListener("click", expCalculater, false);
         </script>
