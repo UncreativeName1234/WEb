@@ -1,0 +1,63 @@
+<!doctype HTML>
+<html lang="en">
+
+    <head>
+        <title>Time Calculator</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <script src="modernizr.custom.05819.js"></script>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/ps4controller.png">
+    </head>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="runescape.html">Runescape</a></li>
+                <li><a href="borderlands3.html">Borderland 3</a></li>
+                <li><a href="skyrim.html">Skyrim</a></li>
+                <li><a href="uno.html">Uno</a></li>
+                <li><a href="timecalculator.html">Time Calc</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+
+        <script src="script.js"></script>
+
+        <main>
+            <form id="calculating">
+                <h2>How much time has elapsed since...?</h2>
+                <div id="udate">
+                    <label>Put in any date:</label>
+                    <div class="row">
+                        <div class="column">
+                            <label>Month (number): </label>
+                            <input id="month" type="number">
+                        </div>
+                        <div class="column">
+                            <label>Day (number): </label>
+                            <input id="day" type="number">
+                        </div>
+                        <div class="column">
+                            <label>Year: </label>
+                            <input id="year" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div id="odate">
+                    <label>This is how much time has passed.</label>
+                    <div id="pasttime"></div>
+                </div>
+                <div>
+                    <input id="calc" type="button" value="Calculate">
+                </div>
+            </form>
+        </main>
+
+    </body>
+
+    <footer>Copyright &#169; 2021-2099 (Disclaimer: This copyright claim holds no real meaning. Thank you.)</footer>
+
+</html>

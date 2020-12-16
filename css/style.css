@@ -56,6 +56,14 @@ form div {
     color: white;
 }
 
+figcaption {
+    text-align: center;
+}
+
+.column {
+    width: 100%;
+  }
+
 @media only screen and (min-width:768px) {
 
     nav ul {
@@ -82,7 +90,7 @@ form div {
 
     nav li a:hover {
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
     .responsive {
@@ -91,6 +99,13 @@ form div {
         margin-left: auto;
         margin-right: auto;
     }
+
+    
+    .column {
+        float: left;
+        width: 33.33%;
+    }
+
 }
 
 @media only screen and (max-width:767px) {
