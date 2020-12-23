@@ -7,10 +7,27 @@
         <meta charset="utf-8">
         <script src="modernizr.custom.05819.js"></script>
         <link rel="icon" type="image/png" sizes="32x32" href="images/ps4controller.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <header>
-        <nav>
+
+        <div class="topnav">
+            <a href="home.html" class="active">Home</a>
+            <div id="myLinks">
+                <a href="home.html">Home</a>
+                <a href="runescape.html">Runescape</a>
+                <a href="borderlands3.html">Borderland 3</a>
+                <a href="skyrim.html">Skyrim</a>
+                <a href="uno.html">Uno</a>
+                <a href="timecalculator.html">Time Calc</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="hamburg()">
+                <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+        <nav class="tab-desk">
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="runescape.html">Runescape</a></li>
@@ -22,7 +39,7 @@
         </nav>
     </header>
 
-    <body>
+    <body class="background">
 
         <script src="script.js"></script>
 
@@ -55,6 +72,49 @@
                 </div>
             </form>
         </main>
+
+
+        <form id="feedback">
+            <p>Tell us me how the site is. :)</p>
+            <div>
+                <div class="row">
+                    <label for="rating">How would you rate it?</label>
+                    <select id="rating">
+                        <option value="0">Choose...</option>
+                        <option value="Poor">Poor</option>
+                        <option value="Below average">Below average</option>
+                        <option value="Good">Good</option>
+                        <option value="Great">Great</option>
+                        <option value="Fantastic">Fantastic</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="options">Which areas need work?</label>
+                    <div id="options">
+                        <input type="checkbox" id="design">
+                        <label for="design">Design</label>
+                        <input type="checkbox" id="content">
+                        <label for="content">Content</label>
+                        <input type="checkbox" id="bugs">
+                        <label for="bugs">Bugs</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="comments">Please comment on the areas you've chosen.</label>
+                </div>
+                <div class="row">
+                <div id="out1"></div><div id="out2"></div><div id="out3"></div>
+                </div>
+                <div class="row">   
+                    <textarea id="comments" rows="7" cols="70"></textarea>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" id="submit2" onclick="getRidOfStuff();">
+                </div>
+            </div>
+        </form>
+
+        <script src="script.js"></script>
 
     </body>
 

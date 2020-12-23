@@ -18,6 +18,12 @@ footer {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(255, 255, 255);
+}
+
 table {
     border: 2px solid white;
 }
@@ -56,43 +62,33 @@ form div {
     color: white;
 }
 
+figure {
+    transform: rotate(5deg);
+}
+
 figcaption {
     text-align: center;
 }
 
 .column {
     width: 100%;
-  }
+}
 
-@media only screen and (min-width:768px) {
+.background {
+    animation: colorchange 3s;
+}
 
-    nav ul {
-        list-style-type: none;
-        text-align: center;
-        margin: 0;
-    }
+@keyframes colorchange {
+    0% {background-color: aqua;}
+    50% {background-color: darkred;}
+    100% {background-color: limegreen;}
+}
 
-    nav li {
-        display: inline-block;
-        font-size: 2em;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-    }
 
-    nav li a {
-        display: block;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-    }
-
-    nav li a:hover {
-        text-decoration: none;
-        font-size: 1.1em;
-    }
-
+@media only screen and (max-width:766px) {
+/*
+    
+*/
     .responsive {
         width: 100%;
         height: auto;
@@ -100,20 +96,63 @@ figcaption {
         margin-right: auto;
     }
 
+    .tab-desk {
+        display: none;
+    }
     
     .column {
         float: left;
         width: 33.33%;
+        display: block;
     }
+
+    .topnav {
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+      }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1.25em;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: rgb(0, 0, 0);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .active {
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
 
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (min-width:767px) {
 
     header {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
+    }
+
+    .topnav {
+        display: none;
+    }
+
+    .tab-desk {
+        display: block;
     }
 
     body {
