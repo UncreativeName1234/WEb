@@ -3,34 +3,41 @@ function calcdate() {
     var month = document.getElementById("month").value;
     var year = document.getElementById("year").value;
     var today = new Date();
+    var currentday = today.getDate();
+    var currentmonth = today.getMonth() + 1;
+    var currentyear = today.getFullYear();
+    var validyear = true;
+    var totaldays = (currentyear - year) * 365;
 
-    currentday = today.getDate();
-    currentmonth = today.getMonth() + 1;
-    currentyear = today.getFullYear();
+    if (day <= 0 || day >= 32) {
+        alert("Please enter a valid day.")
+        validyear = false;
+    } else if (month <= 0 || month >= 13) {
+        alert("Please enter a valid month.")
+        validyear = false;
+    } else if (year > currentyear) {
+        alert("Please enter a valid year.")
+        validyear = false;
+    } else if (validyear = true) {
+        if (currentmonth <= month) {
+            totaldays = totaldays + ((month - currentmonth) * 31);
+        } else if (currentmonth >= month) {
+            totaldays = totaldays + ((currentmonth - month) * 31);
+        }
 
-    totaldays = (currentyear - year) * 365;
-    
-    if (currentmonth <= month) {
-        totaldays = totaldays + ((month - currentmonth) * 31);
-    } else if (currentmonth >= month) {
-        totaldays = totaldays + ((currentmonth - month) * 31);
+        if (currentday <= day) {
+            totaldays = totaldays + (day - currentday);
+        } else if (currentday >= day) {
+            totaldays = totaldays + (currentday - day);
+        }
+        
+        var finalyear = Math.trunc(totaldays / 365);
+        totaldays = totaldays % 365;
+        var finalmonths = Math.trunc(totaldays / 31);
+        totaldays = totaldays % 31;
+        document.getElementById("pasttime").innerHTML = totaldays + " days " + finalmonths + " months " + finalyear + " years since your date.";
+        
     }
-
-    if (currentday <= day) {
-        totaldays = totaldays + (day - currentday);
-    } else if (currentday >= day) {
-        totaldays = totaldays + (currentday - day);
-    }
-
-    finalyear = Math.trunc(totaldays / 365);
-    
-    totaldays = totaldays % 365;
-    
-    finalmonths = Math.trunc(totaldays / 31);
-
-    totaldays = totaldays % 31;
-
-    document.getElementById("pasttime").innerHTML = totaldays + " days " + finalmonths + " months " + finalyear + " years since your date.";
 }
 
 function createEventListener() {
